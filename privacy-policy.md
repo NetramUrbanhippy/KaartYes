@@ -14,12 +14,12 @@ dus ook geen cloud backup van de foto's in de app.
 
 ## Opgeslagen kaartgegevens
 Uw kaartgegevens (namen, nummers, kleur en voorkeuren) worden opgeslagen in 
-Goodle Firebase Firestore, gekoppeld aan jouw Google-account. 
+Google Firebase Firestore, gekoppeld aan jouw Google-account. 
 Deze gegevens worden niet gedeeld met derden. Nu niet, later ook niet. 
 
 ## Opensource
 Deze software is gratis en zal dat ook blijven. Er komt geen reclame in. Nu
-niet, maar ook later niet. Het doel van deze app is om je snel een makkelijk
+niet, maar ook later niet. Het doel van deze app is om je snel en makkelijk
 bij jouw eigen kaarten te laten komen, zonder dat hier een commerciële partij
 meekijkt. 
 
