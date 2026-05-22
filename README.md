@@ -4,6 +4,10 @@ A minimalist Android loyalty card wallet app. Scan or manually enter card barcod
 
 ---
 
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+![Platform: Android](https://img.shields.io/badge/Platform-Android-brightgreen.svg)
+![Free & Open Source](https://img.shields.io/badge/Free-%26%20Open%20Source-blue.svg)
+
 ## Features
 
 - **Google Sign-In** (Firebase Authentication)
