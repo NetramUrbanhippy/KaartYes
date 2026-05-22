@@ -87,15 +87,26 @@ fun CardTile(
         }
 
         if (card.isFavorite) {
-            Icon(
-                Icons.Default.Star,
-                contentDescription = null,
-                tint = Color(0xFFFFD700),
+            Box(
                 modifier = Modifier
                     .align(Alignment.TopStart)
-                    .padding(6.dp)
-                    .size(16.dp)
-            )
+                    .padding(5.dp)
+                    .size(18.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                Icon(
+                    Icons.Default.Star,
+                    contentDescription = null,
+                    tint = Color.Black.copy(alpha = 0.55f),
+                    modifier = Modifier.size(18.dp)
+                )
+                Icon(
+                    Icons.Default.Star,
+                    contentDescription = null,
+                    tint = Color(0xFFFFD700),
+                    modifier = Modifier.size(15.dp)
+                )
+            }
         }
     }
 }
