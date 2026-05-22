@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KaartYes</string>
+
+    <!-- Auth -->
+    <string name="sign_in_with_google">Inloggen met Google</string>
+    <string name="sign_in_title">KaartYes</string>
+    <string name="sign_in_subtitle">Jouw kaarten, gratis opgeslagen. Snel en zonder reclame.</string>
+    <string name="sign_out">Uitloggen</string>
+    <string name="sign_in_failed">Inloggen mislukt</string>
+    <string name="signing_in">Bezig met inloggen…</string>
+
+    <!-- Home -->
+    <string name="loyalty_cards">Loyaliteitskaarten</string>
+    <string name="no_cards_yet">Nog geen kaarten</string>
+    <string name="no_cards_message">Tik op + om je eerste loyaliteitskaart toe te voegen</string>
+    <string name="sort">Sorteren</string>
+    <string name="sort_az">A → Z</string>
+    <string name="sort_za">Z → A</string>
+    <string name="sort_most_used">Meest gebruikt</string>
+    <string name="add_card">Kaart toevoegen</string>
+    <string name="view_all">Alles bekijken</string>
+
+    <!-- Add card -->
+    <string name="choose_card">Kaart kiezen</string>
+    <string name="search_by_name">Zoeken op naam</string>
+    <string name="other_card">Andere kaart</string>
+    <string name="phone_number_card">Telefoonnummer</string>
+    <string name="phone_number_card_desc">Een loyaliteitskaart gekoppeld aan je telefoonnummer</string>
+    <string name="scan_barcode">Barcode scannen</string>
+    <string name="scan_qr_code">QR-code scannen</string>
+    <string name="enter_manually">Kaartnummer handmatig invoeren</string>
+    <string name="upload_card_image">Kaartafbeelding uploaden</string>
+    <string name="add_card_number_manually">Kaartnummer handmatig toevoegen</string>
+    <string name="card_number_hint">Voer het nummer in dat op je kaart staat</string>
+    <string name="card_number">Kaartnummer</string>
+    <string name="store_name">Winkelnaam</string>
+    <string name="add">Toevoegen</string>
+    <string name="card_number_required">Kaartnummer is verplicht</string>
+    <string name="store_name_required">Winkelnaam is verplicht</string>
+    <string name="camera_permission_required">Cameratoegang is nodig om kaarten te scannen</string>
+    <string name="open_settings">Instellingen openen</string>
+    <string name="point_camera_at_barcode">Richt je camera op de barcode of QR-code</string>
+    <string name="card_found">Kaart gevonden!</string>
+    <string name="card_already_exists">Kaart staat al in je portemonnee</string>
+
+    <!-- Card detail -->
+    <string name="manage">Beheren</string>
+    <string name="edit_card">Kaart bewerken</string>
+    <string name="notes">Notities</string>
+    <string name="photos">Foto\'s</string>
+    <string name="delete_card">Kaart verwijderen</string>
+    <string name="delete_card_confirm">Weet je zeker dat je deze kaart wilt verwijderen?</string>
+    <string name="delete">Verwijderen</string>
+    <string name="cancel">Annuleren</string>
+    <string name="details">Details</string>
+    <string name="barcode">Barcode</string>
+    <string name="qr_code">QR-code</string>
+    <string name="toggle_barcode_type">Weergavetype wisselen</string>
+
+    <!-- Edit card -->
+    <string name="edit_card_title">Kaart bewerken</string>
+    <string name="nickname_optional">Bijnaam (optioneel)</string>
+    <string name="card_color">Kaartkleur</string>
+    <string name="save">Opslaan</string>
+
+    <!-- Notes -->
+    <string name="add_note">Notitie toevoegen</string>
+    <string name="edit_note">Notitie bewerken</string>
+    <string name="note_hint">Begin met schrijven…</string>
+
+    <!-- Photos -->
+    <string name="card_photos">Kaartfoto\'s</string>
+    <string name="front">Voorkant</string>
+    <string name="back">Achterkant</string>
+    <string name="add_photo">Foto toevoegen</string>
+    <string name="remove_photo">Foto verwijderen</string>
+
+    <!-- Search -->
+    <string name="search_hint">Zoeken..</string>
+    <string name="search">Zoeken</string>
+
+    <!-- Photo source -->
+    <string name="take_photo">Foto maken</string>
+    <string name="choose_from_gallery">Kiezen uit galerij</string>
+
+    <!-- General -->
+    <string name="back_button">Terug</string>
+    <string name="close">Sluiten</string>
+    <string name="loading">Laden…</string>
+    <string name="error_occurred">Er is een fout opgetreden</string>
+    <string name="retry">Opnieuw proberen</string>
+    <string name="used_count">%1$d keer gebruikt</string>
+</resources>

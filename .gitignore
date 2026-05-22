@@ -1,0 +1,19 @@
+# Keystore — bewaar deze bestanden NOOIT in Git
+keystore.properties
+*.jks
+*.keystore
+
+# Build output
+/build
+/app/build
+
+# Local config
+local.properties
+.gradle
+
+# IDE
+.idea/
+*.iml
+
+# Google services — bevat API-sleutels
+app/google-services.json

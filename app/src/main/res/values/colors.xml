@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#F2F2F2</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="on_background">#1A1A1A</color>
+    <color name="on_surface">#1A1A1A</color>
+    <color name="primary">#2D2D2D</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="secondary">#757575</color>
+    <color name="outline">#E0E0E0</color>
+    <color name="error">#D32F2F</color>
+
+    <!-- Card tile colors -->
+    <color name="tile_blue">#1976D2</color>
+    <color name="tile_light_blue">#2196F3</color>
+    <color name="tile_green">#388E3C</color>
+    <color name="tile_teal">#009688</color>
+    <color name="tile_red">#D32F2F</color>
+    <color name="tile_purple">#7B1FA2</color>
+    <color name="tile_orange">#F57C00</color>
+    <color name="tile_pink">#C2185B</color>
+    <color name="tile_dark">#212121</color>
+    <color name="tile_brown">#5D4037</color>
+</resources>
