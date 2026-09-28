@@ -9,7 +9,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Sort
 import androidx.compose.material3.*
@@ -20,9 +19,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.google.firebase.auth.FirebaseAuth
 import nl.kaartyes.app.R
 import nl.kaartyes.app.domain.model.SortOrder
 import nl.kaartyes.app.ui.components.CardTile
+import nl.kaartyes.app.ui.components.UserAvatar
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -30,15 +31,14 @@ fun HomeScreen(
     onCardClick: (Long) -> Unit,
     onAddCard: () -> Unit,
     onSignOut: () -> Unit,
-    isDarkMode: Boolean = false,
-    onToggleDarkMode: () -> Unit = {},
     viewModel: HomeViewModel = hiltViewModel()
 ) {
     val cards by viewModel.cards.collectAsState()
     val sortOrder by viewModel.sortOrder.collectAsState()
     val searchQuery by viewModel.searchQuery.collectAsState()
     var showSortMenu by remember { mutableStateOf(false) }
-    var showMoreMenu by remember { mutableStateOf(false) }
+    var showAccountMenu by remember { mutableStateOf(false) }
+    val currentUser = remember { FirebaseAuth.getInstance().currentUser }
     var showSearch by remember { mutableStateOf(false) }
 
     Scaffold(
@@ -108,25 +108,29 @@ fun HomeScreen(
                         )
                     }
 
-                    IconButton(onClick = { showMoreMenu = true }) {
-                        Icon(Icons.Default.MoreVert, contentDescription = null)
+                    IconButton(onClick = { showAccountMenu = true }) {
+                        UserAvatar(user = currentUser)
                     }
                     DropdownMenu(
-                        expanded = showMoreMenu,
-                        onDismissRequest = { showMoreMenu = false }
+                        expanded = showAccountMenu,
+                        onDismissRequest = { showAccountMenu = false }
                     ) {
-                        DropdownMenuItem(
-                            text = {
-                                Text(
-                                    if (isDarkMode) stringResource(R.string.light_mode)
-                                    else stringResource(R.string.dark_mode)
-                                )
-                            },
-                            onClick = { showMoreMenu = false; onToggleDarkMode() }
-                        )
+                        val name = currentUser?.displayName
+                        val email = currentUser?.email
+                        if (!name.isNullOrBlank() || !email.isNullOrBlank()) {
+                            Column(modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)) {
+                                if (!name.isNullOrBlank()) {
+                                    Text(name, style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Medium)
+                                }
+                                if (!email.isNullOrBlank()) {
+                                    Text(email, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.secondary)
+                                }
+                            }
+                            HorizontalDivider(color = MaterialTheme.colorScheme.outline)
+                        }
                         DropdownMenuItem(
                             text = { Text(stringResource(R.string.sign_out)) },
-                            onClick = { showMoreMenu = false; onSignOut() }
+                            onClick = { showAccountMenu = false; onSignOut() }
                         )
                     }
                 },

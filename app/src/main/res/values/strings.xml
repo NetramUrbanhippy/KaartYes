@@ -89,9 +89,6 @@
     <string name="search_hint">Zoeken..</string>
     <string name="search">Zoeken</string>
 
-    <!-- Dark mode -->
-    <string name="dark_mode">Dark mode</string>
-    <string name="light_mode">Light mode</string>
 
     <!-- Photo source -->
     <string name="take_photo">Take photo</string>

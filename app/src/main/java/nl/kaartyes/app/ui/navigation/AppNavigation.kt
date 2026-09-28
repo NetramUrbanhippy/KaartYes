@@ -21,10 +21,7 @@ import nl.kaartyes.app.ui.screens.notes.NotesScreen
 import nl.kaartyes.app.ui.screens.photos.PhotosScreen
 
 @Composable
-fun AppNavigation(
-    isDarkMode: Boolean = false,
-    onToggleDarkMode: () -> Unit = {}
-) {
+fun AppNavigation() {
     val navController = rememberNavController()
     val authViewModel: AuthViewModel = hiltViewModel()
     val isLoggedIn by authViewModel.isLoggedIn.collectAsState()
@@ -56,9 +53,7 @@ fun AppNavigation(
                     navController.navigate(Screen.Login.route) {
                         popUpTo(Screen.Home.route) { inclusive = true }
                     }
-                },
-                isDarkMode = isDarkMode,
-                onToggleDarkMode = onToggleDarkMode
+                }
             )
         }
 
