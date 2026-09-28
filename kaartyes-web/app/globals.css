@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+/* Kleuren 1-op-1 overgenomen van de Android-app (ui/theme/Color.kt) */
+:root {
+  --background: #f2f2f2;
+  --foreground: #1a1a1a;
+  --surface: #ffffff;
+  --surface-variant: #f5f5f5;
+  --primary: #2d2d2d;
+  --on-primary: #ffffff;
+  --secondary: #757575;
+  --outline: #e0e0e0;
+  --error: #d32f2f;
+}
+
+/* Donkere modus, 1-op-1 overgenomen van Android's DarkColorScheme (Color.kt) */
+.dark {
+  --background: #121212;
+  --foreground: #e8e8e8;
+  --surface: #1e1e1e;
+  --surface-variant: #2c2c2c;
+  --primary: #e0e0e0;
+  --on-primary: #1a1a1a;
+  --secondary: #9e9e9e;
+  --outline: #3a3a3a;
+  --error: #d32f2f;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-variant: var(--surface-variant);
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+  --color-secondary: var(--secondary);
+  --color-outline: var(--outline);
+  --color-error: var(--error);
+  --font-sans: var(--font-geist);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist), system-ui, -apple-system, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Scananimatie op het "kaart scannen"-scherm, 1-op-1 met de Android ScanScreen */
+@keyframes scan-line {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+.animate-scan-line {
+  animation: scan-line 1.8s linear infinite;
+}
+
+@keyframes corner-pulse {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.animate-corner-pulse {
+  animation: corner-pulse 0.9s ease-in-out infinite alternate;
+}
+
+/* Safe area insets voor notch/home indicator */
+.pt-safe-top {
+  padding-top: max(env(safe-area-inset-top), 1rem);
+}
+.pb-safe-bottom {
+  padding-bottom: max(env(safe-area-inset-bottom), 1.5rem);
+}
